@@ -1515,7 +1515,8 @@ footer p {
     }
 
     .featuresSlider h1 {
-        left: 50px;
+        left: 0px;
+        text-align: center;
     }
 
     .swiperFeaturesTitle {
