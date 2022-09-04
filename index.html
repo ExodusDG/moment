@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment - Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/hamburgers.min.css">
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="navbar">
+            <div class="container">
+                <nav>
+                    <a href="/"><img src="images/logotype.svg" alt="Logotype"></a>
+                    <ul class="navbarLinksList">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#works">How it Works</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
+                    </ul>
+                    <a class="loginButton" href="#">
+                        <p>Log in</p>
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.875 1.375H15.125C14.3657 1.375 13.75 1.99074 13.75 2.75C13.75 3.50926 14.3657 4.125 15.125 4.125H17.875C18.6343 4.125 19.25 4.74074 19.25 5.5V16.5C19.25 17.2593 18.6343 17.875 17.875 17.875H15.125C14.3657 17.875 13.75 18.4907 13.75 19.25C13.75 20.0093 14.3657 20.625 15.125 20.625H17.875C20.1532 20.625 22 18.7782 22 16.5V5.5C22 3.2218 20.1523 1.375 17.875 1.375ZM14.7211 10.0289L9.22109 4.52891C8.68355 3.99137 7.81344 3.99223 7.27676 4.52891C6.73965 5.06602 6.73965 5.93613 7.27676 6.47324L10.4328 9.625H1.375C0.614883 9.625 0 10.2395 0 11C0 11.7605 0.614883 12.375 1.375 12.375H10.4328L7.27977 15.528C6.74266 16.0652 6.74266 16.9353 7.27977 17.4724C7.81687 18.0095 8.68699 18.0095 9.2241 17.4724L14.7241 11.9724C15.2582 11.434 15.2582 10.566 14.7211 10.0289Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <button class="hamburger hamburger--slider" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </nav>
+            </div>
+            <div class="mbMenu">
+                <div class="container">
+                    <div class="mbMenuHeader">
+                        <a href="/"><img src="images/logotype.svg" alt="Logotype"></a>
+                        <button class="hamburger is-active hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="mbMenuLinks">
+                        <ul class="navbarLinksList">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#works">How it Works</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#contacts">Contacts</a></li>
+                        </ul>
+                        <a class="loginButton" href="#">
+                            <p>Log in</p>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.875 1.375H15.125C14.3657 1.375 13.75 1.99074 13.75 2.75C13.75 3.50926 14.3657 4.125 15.125 4.125H17.875C18.6343 4.125 19.25 4.74074 19.25 5.5V16.5C19.25 17.2593 18.6343 17.875 17.875 17.875H15.125C14.3657 17.875 13.75 18.4907 13.75 19.25C13.75 20.0093 14.3657 20.625 15.125 20.625H17.875C20.1532 20.625 22 18.7782 22 16.5V5.5C22 3.2218 20.1523 1.375 17.875 1.375ZM14.7211 10.0289L9.22109 4.52891C8.68355 3.99137 7.81344 3.99223 7.27676 4.52891C6.73965 5.06602 6.73965 5.93613 7.27676 6.47324L10.4328 9.625H1.375C0.614883 9.625 0 10.2395 0 11C0 11.7605 0.614883 12.375 1.375 12.375H10.4328L7.27977 15.528C6.74266 16.0652 6.74266 16.9353 7.27977 17.4724C7.81687 18.0095 8.68699 18.0095 9.2241 17.4724L14.7241 11.9724C15.2582 11.434 15.2582 10.566 14.7211 10.0289Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HEADER -->
+        <div class="headerContent" id="home">
+            <div class="headerVideoMask"></div>
+
+            <div class="headerText">
+                <div class="container">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <h1>Lorem ipsum dolor sit amet</h1>
+                    <div class="headerTextButtons">
+                        <a href="#"><button class="blueButton">Register</button></a>
+                        <a href="#"><button class="transparentButton">Download App</button></a>
+                    </div>
+
+                    <img class="headerMouse" src="images/mouse.png" alt="Mouse">
+                </div>
+
+            </div>
+
+            <!-- YOUTUBE VIDEO -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/zmN8EhB37xA?&autoplay=1&mute=1&controls=0&loop=1"></iframe>
+            </div>
+            <!-- YOUTUBE VIDEO END -->
+        </div>
+    </section>
+
+    <!-- HOW -->
+
+    <section class="how" id="works">
+        <div class="container">
+            <div class="howTitle">
+                <hr>
+                <h1>How it works?</h1>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint
+                    commodi
+                </h2>
+            </div>
+
+            <div class="howContent">
+                <div class="howSlider">
+                    <div class="howSliderWrapper">
+                        <img src="images/appScreen.png" alt="App">
+                    </div>
+                </div>
+                <div class="howItems">
+                    <div class="howItemMain">
+                        <div class="howItem">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="howItemNote">
+                            <img src="images/note_1.svg" alt="note">
+                            <div class="howItemBlock">
+                                <p class="howItemTitle">Lorem Ipsum 1</p>
+                                <p class="howItemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Repellat quisquam dolor, ratione tempore, blanditiis iure non. Reprehenderit libero
+                                    debitis quasi, odit, aliquid provident.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img class="howItemLine" src="images/Line.svg" alt="Line">
+
+                    <div class="howItemMain">
+                        <div class="howItem">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                        <div class="howItemNote">
+                            <img src="images/note_1.svg" alt="note">
+                            <div class="howItemBlock">
+                                <p class="howItemTitle">Lorem Ipsum 2</p>
+                                <p class="howItemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Repellat quisquam dolor, ratione tempore, blanditiis iure non. Reprehenderit libero
+                                    debitis quasi, odit, aliquid provident.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img class="howItemLine" src="images/Line.svg" alt="Line">
+
+                    <div class="howItemMain">
+                        <div class="howItem">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                        <div class="howItemNote">
+                            <img src="images/note_1.svg" alt="note">
+                            <div class="howItemBlock">
+                                <p class="howItemTitle">Lorem Ipsum 3</p>
+                                <p class="howItemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Repellat quisquam dolor, ratione tempore, blanditiis iure non. Reprehenderit libero
+                                    debitis quasi, odit, aliquid provident.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img class="howItemLine" src="images/Line.svg" alt="Line">
+
+                    <div class="howItemMain">
+                        <div class="howItem">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <div class="howItemNote">
+                            <img src="images/note_1.svg" alt="note">
+                            <div class="howItemBlock">
+                                <p class="howItemTitle">Lorem Ipsum 4</p>
+                                <p class="howItemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Repellat quisquam dolor, ratione tempore, blanditiis iure non. Reprehenderit libero
+                                    debitis quasi, odit, aliquid provident.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+
+    <section class="download">
+        <div class="container">
+            <div class="downloadContent">
+                <div class="downloadLeft">
+                    <h1>DOWNLOAD <span>APP</span> RIGHT NOW</h1>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel
+                        sint commodi repudiandae consequuntur voluptatum laborum numquam.
+                    </h2>
+                    <div class="downloadLeftButtons">
+                        <a class="transparentButton" href="#">
+                            <i class="fa-brands fa-apple"></i>
+                            <p>Download Now</p>
+                        </a>
+                        <a class="blueButton" href="#">
+                            <i class="fa-brands fa-google-play"></i>
+                            <p>Download Now</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="downloadRight">
+                    <img src="images/downloadPhone.png" alt="Download">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+
+    <section class="gallery" id="gallery">
+        <h1 class="galleryTitle">Gallery</h1>
+
+        <div class="sliderTop">
+            <h2>Lorem <span>ipsum</span> dolor sit</h2>
+            <h3>creating brands people love to look at</h3>
+
+            <div class="sliderTopWrapper">
+                <div class="swiper swiperTop">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/topSlider/image_1.png" alt="Slider Image"></div>
+                        <div class="swiper-slide"><img src="images/topSlider/image_2.png" alt="Slider Image"></div>
+                    </div>
+                </div>
+                <div class="sliderTopBottom">
+                    <p>lorem ipsum dolor sit amet</p>
+                    <div class="sliderTopBottomNav">
+                        <button class="sliderTopLeft"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
+                        <button class="sliderTopRight"><i class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sliderVert">
+            <div class="swiper sliderVertWrapper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/middleSlider/image_1.png" alt="Slider Image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/middleSlider/image_1.png" alt="Slider Image">
+                    </div>
+                </div>
+            </div>
+            <div class="sliderVertText">
+                <h1>Lorem ipsum dolor sit amet</h1>
+            </div>
+        </div>
+
+        <div class="sliderBottom">
+            <div class="sliderBottomText">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+
+            <div class="swiper swiperBottom">
+                <div class="swiperBottomNav">
+                    <button class="sliderBottomLeft"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
+                    <button class="sliderBottomRight"><i class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/bottomSlider/image_1.png" alt="Slider Image"></div>
+                    <div class="swiper-slide"><img src="images/bottomSlider/image_2.png" alt="Slider Image"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="features" id="features">
+        <div class="featuresSlider">
+            <h1>Features.</h1>
+            <div class="swiper swiperFeatures">
+                <div class="swiperBottomNav swiperFeaturesNav">
+                    <button class="sliderFeaturesLeft"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
+                    <button class="sliderFeaturesRight"><i class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="swiperFeaturesContent">
+                            <p class="swiperFeaturesNumber">1/4</p>
+                            <p class="swiperFeaturesTitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="swiperFeaturesDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Maxime mollitia,
+                                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                                optio, eaque rerum! Provident similique accusantium nemo autem.</p>
+                            <a href="#"><button class="blueButton">Registration</button></a>
+                        </div>
+                        <img src="images/featuresSlider/image_1.png" alt="Slider Image">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiperFeaturesContent">
+                            <p class="swiperFeaturesNumber">2/4</p>
+                            <p class="swiperFeaturesTitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="swiperFeaturesDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Maxime mollitia,
+                                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                                optio, eaque rerum! Provident similique accusantium nemo autem.</p>
+                            <a href="#"><button class="blueButton">Registration</button></a>
+                        </div>
+                        <img src="images/featuresSlider/image_2.jpg" alt="Slider Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+
+    <section class="download">
+        <div class="container">
+            <div class="downloadContent">
+                <div class="downloadLeft">
+                    <h1>Lorem <span>ipsum</span> dolor sit</h1>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel
+                        sint commodi repudiandae consequuntur voluptatum laborum numquam.
+                    </h2>
+                </div>
+                <div class="statsRight">
+                    <div>
+                        <p class="statsBlockTitle">100K</p>
+                        <p class="statsBlockDesc">users</p>
+                    </div>
+                    <div>
+                        <p class="statsBlockTitle">20K</p>
+                        <p class="statsBlockDesc">downloads</p>
+                    </div>
+                    <div>
+                        <p class="statsBlockTitle">11</p>
+                        <p class="statsBlockDesc">languages</p>
+                    </div>
+                    <div>
+                        <p class="statsBlockTitle">757</p>
+                        <p class="statsBlockDesc">lorem ipsum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTS -->
+
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="contactsText">
+                <h1>Contacts</h1>
+                <hr>
+                <p class="contactsTextDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                    molestiae quas vel sint commodi repudiandae.</p>
+                <p class="phoneNumber"><span>097</span>5446793</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="container">
+            <img class="footerLogo" src="images/logotype.svg" alt="Logotype">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+    </footer>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
