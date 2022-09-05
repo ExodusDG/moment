@@ -600,7 +600,9 @@ iframe {
     width: 628px;
 
 }
-
+.phoneImageSlider {
+    display: none;
+}
 .sliderVertText h1 {
     color: #3974F4 !important;
 }

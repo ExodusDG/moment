@@ -69,7 +69,7 @@ const swiperFeatures = new Swiper('.swiperFeatures', {
 
 
 /* HOW SLIDER */
-
+var imagePath;
 $.each($('.howItemMain'), function (key, value) {
   key = key + 1;
   $(this).attr('id', `how_${key}`)
@@ -82,6 +82,9 @@ $('.howItemMain').click(function () {
 
   currentSlide.addClass('slideActive')
   currentSlide.find('.howItemNote').addClass('howItemNoteShow')
+
+  imagePath = $(this).find('.phoneImageSlider').attr('src')
+  $('.howSliderWrapper img').attr('src', imagePath)
 })
 
 $('#how_1').trigger('click')
