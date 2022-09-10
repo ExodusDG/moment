@@ -25,6 +25,7 @@ body {
 
 
 /* NAVBAR */
+
 .mbMenu {
     display: none;
 }
@@ -151,7 +152,7 @@ iframe {
 }
 
 .headerText h1 {
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 700;
     font-size: 96px;
@@ -224,11 +225,9 @@ iframe {
     0% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-20px);
     }
-
     100% {
         transform: translateY(0);
     }
@@ -260,7 +259,7 @@ iframe {
 }
 
 .howTitle h1 {
-    font-family: 'europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 600;
     font-size: 46px;
@@ -270,7 +269,7 @@ iframe {
 }
 
 .howTitle h2 {
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -379,7 +378,7 @@ iframe {
 }
 
 .howItemTitle {
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -388,7 +387,7 @@ iframe {
 }
 
 .howItemText {
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -407,7 +406,7 @@ iframe {
 }
 
 .downloadLeft h1 {
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
@@ -420,12 +419,12 @@ iframe {
 .downloadLeft span {
     color: var(--BlueColor);
     font-weight: 700;
-    font-family: 'Europe';
+    font-family: 'europa';
 }
 
 .downloadLeft h2 {
     width: 620px;
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -457,10 +456,11 @@ iframe {
     align-items: center;
 }
 
+
 /* GALLERY */
 
 .gallery {
-    padding-top: 60px;
+    padding-top: 0px;
     padding-bottom: 160px;
 }
 
@@ -475,7 +475,6 @@ iframe {
     margin-left: 40px;
     top: 20px;
     z-index: 999999999;
-
 }
 
 .sliderTop {
@@ -483,7 +482,6 @@ iframe {
 }
 
 .sliderTop h2 {
-
     font-style: normal;
     font-weight: 600;
     font-size: 54px;
@@ -581,13 +579,12 @@ iframe {
     position: relative;
 }
 
-
 .sliderVert {
     position: relative;
 }
 
 .sliderVertText {
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 700;
     font-size: 76px;
@@ -598,11 +595,12 @@ iframe {
     left: 900px;
     top: 200px;
     width: 628px;
-
 }
+
 .phoneImageSlider {
     display: none;
 }
+
 .sliderVertText h1 {
     color: #3974F4 !important;
 }
@@ -620,7 +618,7 @@ iframe {
 
 .sliderBottomText p {
     color: var(--LightBlack);
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 700;
     font-size: 96px;
@@ -635,14 +633,11 @@ iframe {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-
 }
 
 .swiperBottom {
     margin-right: 0 !important;
 }
-
 
 .swiperBottomNav button {
     width: 50px;
@@ -674,6 +669,7 @@ iframe {
     left: 20px;
     z-index: 9999;
 }
+
 
 /* FEATURES */
 
@@ -714,9 +710,8 @@ iframe {
     margin-bottom: 10px;
 }
 
-
 .swiperFeaturesDesc {
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -776,7 +771,7 @@ iframe {
 }
 
 .statsBlockTitle {
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 700;
     font-size: 44px;
@@ -786,7 +781,7 @@ iframe {
 }
 
 .statsBlockDesc {
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -811,7 +806,7 @@ iframe {
 }
 
 .contactsText h1 {
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 700;
     font-size: 65px;
@@ -843,7 +838,7 @@ iframe {
 }
 
 .phoneNumber {
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
@@ -855,7 +850,7 @@ iframe {
 
 .phoneNumber span {
     color: #3974F4;
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
@@ -863,6 +858,7 @@ iframe {
     text-align: center;
     letter-spacing: 0.115em;
 }
+
 
 /* FOOTER */
 
@@ -883,7 +879,7 @@ footer .container {
 }
 
 footer p {
-    font-family: 'Europe';
+    font-family: 'europa';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -918,7 +914,6 @@ footer p {
         opacity: 0;
         transform: translateX(40px);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0px);
@@ -931,16 +926,13 @@ footer p {
         position: relative;
         top: 1px;
     }
-
     .sliderBottomText p {
         left: 50px;
     }
-
     .swiperBottom img {
         width: 700px;
         height: 430px;
     }
-
     .swiperBottom {
         width: 700px;
         justify-content: flex-end;
@@ -954,49 +946,40 @@ footer p {
         margin: 0 auto;
         width: 100%;
     }
-
     .how {
         height: auto;
     }
-
     .swiperFeatures .swiper-slide img {
         width: 868px;
         height: 470px;
     }
-
     .swiperFeaturesContent {
         position: absolute;
         left: 200px;
         top: 50px;
     }
-
     .swiperFeaturesTitle {
         font-size: 44px;
         width: 768px;
     }
-
     .swiperFeaturesDesc {
         font-size: 14px;
     }
-
     .sliderVertWrapper img {
         width: 868px;
         height: 512px;
         user-select: none;
     }
-
     .sliderVertWrapper {
         height: 512px;
         position: relative;
     }
-
     .sliderVertText {
         font-size: 56px;
         left: 500px;
         top: 100px;
         width: 628px;
     }
-
     .sliderVertText {
         font-size: 76px;
         left: 600px;
@@ -1005,50 +988,39 @@ footer p {
     }
 }
 
-
 @media (max-width: 1240px) {
     .howSlider {
         margin-right: 100px;
     }
-
     .howItemBlock {
         width: 350px;
     }
-
     .howItemNote {
         left: 100px;
     }
-
     .howContent {
         position: relative;
         left: 11%;
     }
-
     .headerText {
         top: 200px;
     }
-
     .swiperFeaturesContent {
         left: 100px;
     }
-
     .featuresSlider h1 {
         left: 100px;
     }
-
     .downloadLeft h2 {
         width: 80%;
     }
-
     .statsRight>div {
         width: 200px;
         height: 130px;
     }
-
     .statsBlockTitle {
         font-size: 34px;
     }
-
     .statsBlockDesc {
         font-size: 20px;
     }
@@ -1058,30 +1030,24 @@ footer p {
     .header {
         height: 768px;
     }
-
     .video-container {
         height: 768px;
         transform: scale(1.35);
     }
-
     .headerText h1 {
         max-width: 80%;
         line-height: 92px;
     }
-
     .headerText {
         top: 250px;
     }
-
     .howContent {
         position: relative;
         left: 0%;
     }
-
     .howSlider {
         margin-right: 0px;
     }
-
     .howContent {
         display: flex;
         justify-content: space-between;
@@ -1089,137 +1055,108 @@ footer p {
         margin: 0 auto;
         margin-top: 50px;
     }
-
     .how {
         height: 1200px;
     }
-
     .howContent {
         margin-top: 350px;
     }
-
     .howItemMain {
         position: unset;
     }
-
     .howItemNote {
         left: 0px;
         top: -200px;
     }
-
     .howItemNote img {
         display: none;
     }
-
     .howItemBlock {
         width: 100%;
     }
-
     .howContent {
         margin-top: 250px;
     }
-
     .galleryTitle {
         font-size: 26px;
         margin-left: 20px;
         top: 10px;
     }
-
     .sliderTopWrapper {
         width: 90%;
         margin: 0 auto;
     }
-
     .swiperTop img {
         max-width: 400px;
     }
-
     .sliderVertWrapper img {
         width: 60%;
         height: auto;
         user-select: none;
     }
-
     .sliderVertText {
         font-size: 76px;
         left: 300px;
         top: 50px;
         width: 628px;
     }
-
     .sliderVertWrapper {
         height: 400px;
         position: relative;
     }
-
     .sliderBottomText p {
         font-size: 66px;
         width: 80%;
     }
-
     .sliderVertText h1 {
         font-size: 86px;
         font-weight: 700;
-
     }
-
     .swiperBottom {
         width: 60%;
     }
-
     .swiperBottom img {
         width: 100%;
         height: 430px;
     }
-
     .swiperBottom {
         width: 100%;
     }
-
     .swiperBottom img {
         width: 100%;
         height: 370px;
     }
-
     .swiperBottom {
         height: 370px;
     }
-
     .sliderBottomText p {
         font-size: 56px;
         width: 80%;
     }
-
     .swiperFeatures .swiper-slide img {
         width: 70%;
         height: 470px;
     }
-
     .downloadLeft h1 {
         font-size: 44px;
         width: 80%;
     }
-
     .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after {
         background-color: white;
     }
-
     .loginButton {
         display: none;
     }
-
     .hamburger.is-active .hamburger-inner,
     .hamburger.is-active .hamburger-inner::after,
     .hamburger.is-active .hamburger-inner::before {
         background-color: var(--BlueColor);
     }
-
     .navbarLinksList {
         display: none;
     }
-
     .mbMenu {
         background: var(--DarkBlack);
         width: 100vw;
@@ -1230,56 +1167,44 @@ footer p {
         left: 100%;
         top: 0;
     }
-
     .mbMenuActive {
         left: 0;
     }
-
     .mbMenu {
         padding-top: 20px;
     }
-
     .mbMenuHeader {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
     .mbMenuLinks .navbarLinksList {
         display: block;
     }
-
     .navbarLinksList a {
         font-size: 48px;
     }
-
     .navbarLinksList li {
         margin-bottom: 50px;
     }
-
     .navbarLinksList {
         margin-top: 100px;
     }
-
     .mbMenuLinks .loginButton {
         display: flex;
     }
-
     .mbMenuLinks .loginButton {
         display: flex;
         width: 250px;
         height: 70px;
     }
-
     .mbMenuLinks .loginButton {
         padding-left: 60px;
     }
-
     .loginButton p {
         margin-right: 10px;
         font-size: 28px;
     }
-
     .loginButton svg {
         width: 35px;
     }
@@ -1291,130 +1216,104 @@ footer p {
     }
 }
 
-
 @media (max-width: 768px) {
     .headerText h1 {
         max-width: 100%;
     }
-
     .headerText {
         top: 200px;
     }
-
     .headerText h1 {
         width: 90%;
         font-size: 66px;
         line-height: 79px;
     }
-
     .video-container {
         height: 768px;
         transform: scale(1.85);
     }
-
     .downloadContent {
         display: block;
     }
-
     .downloadLeft h1 {
         font-size: 44px;
         width: 100%;
     }
-
     .downloadLeft h2 {
         width: 100%;
     }
-
     .downloadRight {
         text-align: center;
         margin-top: 50px;
     }
-
     .downloadLeftButtons {
         display: flex;
         justify-content: space-between;
     }
-
     .downloadContent {
         display: block;
     }
-
     .swiperTop img {
         width: 100%;
     }
-
     .sliderTop {
         margin-top: 50px;
     }
-
     .sliderTopWrapper .swiper-slide {
         width: 100%;
         margin-top: 20px;
     }
-
     .swiperTop img {
         max-width: unset;
     }
-
     .sliderVertText h1 {
         font-size: 55px;
         font-weight: 700;
     }
-
     .sliderVertText {
         font-size: 76px;
         left: 30%;
         top: 50px;
         width: 70%;
     }
-
     .sliderVertText h1 {
         font-size: 55px;
         font-weight: 700;
         line-height: 70px;
     }
-
     .sliderVertText {
         position: relative;
     }
-
     .sliderVertWrapper img {
         width: 100%;
         height: auto;
         user-select: none;
     }
-
     .sliderVert {
         display: flex;
         flex-wrap: wrap-reverse;
     }
-
     .sliderVertText {
         font-size: 76px;
         left: 0%;
         top: 50px;
         width: 100%;
     }
-
     .sliderVertText {
         text-align: center;
     }
-
     .sliderVertText h1 {
         font-size: 45px;
     }
-
     .sliderBottomText p {
         font-size: 56px;
         width: 100%;
         z-index: 9999;
         position: absolute;
     }
-
     .swiperBottom {
         width: 80%;
     }
-
     .sliderBottomText p {
         font-size: 56px;
         width: 100%;
@@ -1423,26 +1322,21 @@ footer p {
         color: var(--BlueColor);
         display: none;
     }
-
     .swiperFeatures .swiper-slide img {
         width: 70%;
         height: 370px;
     }
-
     .swiperFeaturesTitle {
         font-size: 34px;
         width: 80%;
     }
-
     .swiperFeaturesDesc {
         font-size: 14px;
         width: 80%;
     }
-
     .swiperFeaturesContent {
         top: 25px;
     }
-
     .statsRight {
         display: flex;
         justify-content: space-between;
@@ -1452,13 +1346,11 @@ footer p {
         margin-top: 50px;
         row-gap: 30px;
     }
-
     .features {
         padding-top: 60px;
         padding-bottom: 60px;
         background: var(--LightBlack);
     }
-
     .gallery {
         padding-top: 60px;
         padding-bottom: 60px;
@@ -1470,91 +1362,71 @@ footer p {
         height: 768px;
         transform: scale(2.35);
     }
-
     .howContent {
         width: 90%;
     }
-
     .downloadLeftButtons a {
         width: 45%;
         text-decoration: none;
         align-items: center;
         margin-right: 0px;
     }
-
     .transparentButton {
         padding: 18px 24px;
     }
-
     .blueButton {
         padding: 18px 24px;
     }
-
     .sliderTop h2 {
         font-size: 34px;
     }
-
     .galleryTitle {
         position: relative;
     }
-
     .swiperBottom img {
         width: 100%;
         height: 320px;
     }
-
     .swiperBottom {
         height: 320px;
     }
-
     .swiperFeatures .swiper-slide img {
         width: 100%;
         height: 500px;
     }
-
     .swiperFeaturesContent {
         left: 50px;
     }
-
     .featuresSlider h1 {
         left: 0px;
         text-align: center;
     }
-
     .swiperFeaturesTitle {
         font-size: 28px;
         width: 90%;
     }
-
     .downloadLeft h1 {
         font-size: 36px;
     }
-
     .downloadLeft h2 {
         font-size: 14px;
     }
-
     .phoneNumber {
         font-size: 44px;
     }
-
     .phoneNumber span {
         font-size: 44px;
     }
-
     .contactsTextDesc {
         width: 100%;
     }
-
     .footerLogo {
         width: 180px;
         margin: 0 auto;
     }
-
     footer .container {
         flex-wrap: wrap;
     }
-
     footer p {
         margin-top: 20px;
         width: 100%;
@@ -1565,78 +1437,62 @@ footer p {
     .header {
         height: 700px;
     }
-
     .video-container {
         height: 700px;
         transform: scale(2.55);
     }
-
     .headerText h1 {
         width: 90%;
         font-size: 46px;
         line-height: 69px;
     }
-
     .howTitle h2 {
         width: 100%;
     }
-
     .downloadLeftButtons {
         display: block;
     }
-
     .downloadLeftButtons a {
         width: 55%;
     }
-
     .downloadLeftButtons a {
         width: 55%;
         margin-top: 20px;
     }
-
     .downloadLeft h1 {
         font-size: 38px;
     }
-
     .sliderVertText h1 {
         font-size: 32px;
     }
-
     .swiperBottom img {
         width: 100%;
         height: 280px;
     }
-
     .swiperBottomNav {
         bottom: 60px;
     }
-
     .swiperFeatures .swiper-slide img {
         width: 100%;
         height: 350px;
     }
-
     .swiperFeaturesTitle {
         font-size: 28px;
         width: 100%;
     }
-
     .swiperFeaturesTitle {
         font-size: 18px;
         width: 100%;
     }
-
     .swiperFeaturesDesc {
         font-size: 14px;
         width: 100%;
     }
-
     .swiperFeatures .swiper-slide img {
         width: 100%;
         height: 450px;
         object-fit: cover;
     }
-
     .statsRight {
         width: 100%;
     }
@@ -1647,57 +1503,45 @@ footer p {
         height: 806px;
         transform: scale(2.55);
     }
-
     .howTitle h1 {
         font-size: 36px;
     }
-
     .howSlider {
         width: 156px;
         height: 306px;
         background-size: contain;
     }
-
     .howSliderWrapper img {
         width: 130px;
         height: 234px;
     }
-
     .howSlider {
         padding-top: 35px;
         margin-left: 0px;
     }
-
     .howSlider {
         padding-left: 14px;
     }
-
     .how {
         height: 982px;
     }
-
     .downloadLeftButtons a {
         width: 100%;
         margin-top: 20px;
     }
-
     .sliderTopBottom p {
         display: none;
     }
-
     .swiperBottom img {
         width: 100%;
         height: 220px;
     }
-
     .swiperBottom {
         height: 220px;
     }
-
     .swiperBottomNav {
         bottom: 20px;
     }
-
     .statsRight>div {
         width: 160px;
         height: 130px;
@@ -1709,32 +1553,209 @@ footer p {
         height: 789px;
         transform: scale(2.85);
     }
-
     .headerText h1 {
         width: 100%;
         font-size: 46px;
         line-height: 59px;
     }
-
     .sliderTop h2 {
         font-size: 24px;
     }
-
     .sliderTop h3 {
         font-size: 22px;
     }
-
     .sliderVertText h1 {
         font-size: 22px;
     }
-
     .sliderVertWrapper {
         text-align: left;
         margin-top: 50px;
     }
-
     .sliderVertWrapper {
         height: 298px;
         position: relative;
+    }
+}
+
+.galleryRight p {
+    color: var(--LightBlack);
+    font-family: 'europa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 125%;
+    text-transform: uppercase;
+    width: 70%;
+}
+
+.galleryWrapperLeft {
+    width: 65%;
+}
+
+.galleryRight {
+    width: 35%;
+}
+
+.galleryWrapper_1 {
+    display: flex;
+    justify-content: end;
+}
+
+.galleryWrapper_1 img {
+    width: 250px;
+}
+
+.galleryRight p {
+    margin: 0 auto;
+}
+
+.galleryRight {
+    position: relative;
+}
+
+.galleryRight p {
+    position: sticky;
+    top: 0;
+}
+
+.galleryLeftWrapper_1 {
+    width: 70%;
+}
+
+.galleryLeftWrapper_1 img {
+    width: 75%;
+}
+
+.galleryWrapper_1 {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.galleryWrapper_1 img {
+    width: 29%;
+    /* height: 150px; */
+}
+
+.galleryWrapper_2 {
+    width: 71%;
+    display: flex;
+    justify-content: end;
+}
+
+.galleryWrapper_2 img {
+    width: 60%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.gallerySection {
+    display: flex;
+}
+
+.galleryWrapper_3 {
+    width: 20%;
+}
+
+.galleryWrapper_3 img {
+    width: 100%;
+}
+
+.galleryWrapper_4 {
+    width: 71%;
+    display: flex;
+    justify-content: end;
+}
+
+.galleryWrapper_4 img {
+    width: 20%;
+}
+
+.galleryWrapper_5 {
+    width: 57%;
+    display: flex;
+    justify-content: end;
+}
+
+.galleryWrapper_5 img {
+    width: 50%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.galleryWrapper img {
+    transition: 0.8s;
+}
+
+.galleryLeft img {
+    transition: 0.8s;
+}
+
+.galleryImageHidden {
+    position: relative;
+    transform: translateY(250px);
+    opacity: 0;
+}
+
+.galleryRight {
+    transition: 0.8s;
+}
+
+.galleryRight span {
+    font-style: italic;
+    color: #181C21
+}
+
+@media (max-width: 385px) {
+    .blueButton {
+        margin-bottom: 20px;
+    }
+    .headerText h1 {
+        margin-top: 0px;
+    }
+    .statsRight>div {
+        width: 45%;
+        height: 130px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .galleryWrapper {
+        width: 85%;
+    }
+    .galleryWrapper_2 img {
+        height: 350px;
+    }
+    .galleryWrapper_5 img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .galleryRight {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .gallerySection {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    .galleryWrapper {
+        width: 100%;
+    }
+    .galleryWrapper_2 img {
+        height: 250px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 490px) {
+    .galleryWrapper_5 img {
+        height: 150px;
+    }
+    .galleryWrapper_5 img {
+        height: 50px;
+        width: 30%;
     }
 }
