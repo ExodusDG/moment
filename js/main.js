@@ -9,10 +9,19 @@ $('a[href*="#"]').click(function() {
 
 $('.hamburger').click(function() {
     $('.mbMenu').toggleClass('mbMenuActive')
+
+    if ($('.mbMenu').hasClass('mbMenuActive')) {
+        $('body').attr('style', 'overflow: hidden')
+    } else {
+        $('body').attr('style', 'overflow: auto')
+    }
+
 })
 
 $('.navbarLinksList a').click(function() {
     $('.mbMenu').removeClass('mbMenuActive')
+
+    $('body').attr('style', 'overflow: auto')
 })
 
 
