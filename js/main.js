@@ -11,6 +11,9 @@ $('.hamburger').click(function() {
     $('.mbMenu').toggleClass('mbMenuActive')
 })
 
+$('.navbarLinksList a').click(function() {
+    $('.mbMenu').removeClass('mbMenuActive')
+})
 
 
 
@@ -29,8 +32,12 @@ $('.howItemMain').click(function() {
     currentSlide.addClass('slideActive')
     currentSlide.find('.howItemNote').addClass('howItemNoteShow')
 
-    imagePath = $(this).find('.phoneImageSlider').attr('src')
-    $('.howSliderWrapper img').attr('src', imagePath)
+    //imagePath = $(this).find('.phoneImageSlider').attr('src')
+    //$('.howSliderWrapper img').attr('src', imagePath)
+
+    var slideNumber = $(this).attr('id').replace('how_', '')
+    console.log(slideNumber)
+    sliderScroll(slideNumber)
 })
 
 $('#how_1').trigger('click')
@@ -86,3 +93,12 @@ $(window).on('resize scroll', function() {
         $('.galleryRight').removeClass('galleryImageHidden')
     } else {}
 });
+
+
+function sliderScroll(number) {
+    var sliderWrapper = $('.sliderTrackWrapper')
+    var slideWidth = $('.sliderTrackWrapper img').width()
+    var translateWidth = number * slideWidth;
+
+    sliderWrapper.attr('style', 'transform: translateX(-' + translateWidth + 'px)')
+}
