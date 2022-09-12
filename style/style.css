@@ -1817,4 +1817,11 @@ footer p {
     .galleryLeftWrapper_1 img {
         height: 30vh;
     }
+    .galleryWrapper_4 img {
+        width: 40%;
+    }
+    .galleryWrapper_5 img {
+        height: 100px;
+        width: 60%;
+    }
 }
