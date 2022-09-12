@@ -1597,7 +1597,7 @@ footer p {
     width: 35%;
 }
 
-.galleryWrapper_1 {
+.galleryWrapper_1 picture {
     display: flex;
     justify-content: end;
 }
@@ -1640,7 +1640,7 @@ footer p {
     /* height: 150px; */
 }
 
-.galleryWrapper_2 {
+.galleryWrapper_2 picture {
     width: 71%;
     display: flex;
     justify-content: end;
@@ -1656,15 +1656,15 @@ footer p {
     display: flex;
 }
 
-.galleryWrapper_3 {
+.galleryWrapper_3 picture {
     width: 20%;
 }
 
 .galleryWrapper_3 img {
-    width: 100%;
+    width: 40%;
 }
 
-.galleryWrapper_4 {
+.galleryWrapper_4 picture {
     width: 71%;
     display: flex;
     justify-content: end;
@@ -1674,7 +1674,7 @@ footer p {
     width: 20%;
 }
 
-.galleryWrapper_5 {
+.galleryWrapper_5 picture {
     width: 57%;
     display: flex;
     justify-content: end;
