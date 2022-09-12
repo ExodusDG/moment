@@ -325,12 +325,13 @@ video {
     transition: 0.3s;
 }
 
-.howItem:hover .fa-solid {
-    color: white;
+.howItem:hover path {
+    fill: white;
+    transition: 0.3s;
 }
 
-.howItem i {
-    color: var(--BlueColor);
+.howItem path {
+    fill: var(--BlueColor);
     font-size: 24px;
 }
 
@@ -393,6 +394,19 @@ video {
     font-size: 14px;
     line-height: 130%;
     color: #5E6164 !important;
+}
+
+.howItem svg {
+    width: 25px;
+}
+
+.downloadLeftButtons svg {
+    width: 24px;
+    margin-right: 20px;
+}
+
+.downloadLeftButtons path {
+    fill: white;
 }
 
 
@@ -653,14 +667,17 @@ video {
     background: var(--BlueColor);
 }
 
-.swiperBottomNav button:hover .fa-solid {
-    color: white;
+.swiperBottomNav button:hover path {
+    fill: white;
 }
 
-.swiperBottomNav .fa-solid {
-    color: var(--BlueColor);
-    font-size: 22px;
+.swiperBottomNav svg {
+    width: 24px;
     transition: 0.3s;
+}
+
+.swiperBottomNav path {
+    fill: var(--BlueColor);
 }
 
 .swiperBottomNav {
@@ -898,8 +915,8 @@ footer p {
     transform: scale(1.2);
 }
 
-.slideActive i {
-    color: white;
+.slideActive path {
+    fill: white;
 }
 
 .howItemNoteShow {
