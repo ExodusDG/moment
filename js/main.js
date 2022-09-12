@@ -112,19 +112,19 @@ function sliderScroll(number) {
     sliderWrapper.attr('style', 'transform: translateX(-' + translateWidth + 'px)')
 }
 
-const swiperFeatures = new Swiper('.swiperFeatures', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    preloadImages: false,
-    lazy: true,
-    autoplay: true,
-    loop: true,
-    navigation: {
-        nextEl: '.sliderFeaturesRight',
-        prevEl: '.sliderFeaturesLeft',
-    },
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-});
+var check = false;
+
+window.addEventListener("scroll", () => {
+
+    if (check == false) {
+        var swiper = document.createElement("script");
+        swiper.src = "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js";
+        document.body.appendChild(swiper);
+
+        var slider = document.createElement("script");
+        slider.src = "js/slider.js";
+        document.body.appendChild(slider);
+
+        check = true;
+    }
+})
