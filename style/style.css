@@ -26,12 +26,12 @@
 
 @font-face {
     font-family: 'europa';
-    src: url('style/fonts/europanuovaextrabold.eot');
-    src: url('style/fonts/europanuovaextrabold.eot?#iefix') format('embedded-opentype'),
-        url('style/fonts/europanuovaextrabold.woff2') format('woff2'),
-        url('style/fonts/europanuovaextrabold.woff') format('woff'),
-        url('style/fonts/europanuovaextrabold.ttf') format('truetype'),
-        url('style/fonts/europanuovaextrabold.svg#europanuovaextrabold') format('svg');
+    src: url('fonts/europanuovaextrabold.eot');
+    src: url('fonts/europanuovaextrabold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/europanuovaextrabold.woff2') format('woff2'),
+        url('fonts/europanuovaextrabold.woff') format('woff'),
+        url('fonts/europanuovaextrabold.ttf') format('truetype'),
+        url('fonts/europanuovaextrabold.svg#europanuovaextrabold') format('svg');
     font-weight: 700;
 }
 
@@ -58,7 +58,7 @@
     font-family: 'Caveat Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Caveat Regular'), url('style/fonts/Caveat-Regular.woff') format('woff');
+    src: local('Caveat Regular'), url('fonts/Caveat-Regular.woff') format('woff');
 }
 
 
