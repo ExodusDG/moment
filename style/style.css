@@ -1988,6 +1988,9 @@ footer p {
         height: 100px;
         width: 60%;
     }
+    .galleryWrapper_3 img {
+        height: 116px !important;
+    }
 }
 
 
