@@ -1,4 +1,21 @@
+var check = false;
+
+window.addEventListener("scroll", () => {
+    if (check == false) {
+        var swiper = document.createElement("script");
+        swiper.src = "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js";
+        document.body.appendChild(swiper);
+
+        var slider = document.createElement("script");
+        slider.src = "js/slider.js";
+        document.body.appendChild(slider);
+
+        check = true;
+    }
+})
+
 window.onload = function () {
+
     function $(selector) {
         return document.querySelector(selector)
     }
@@ -101,24 +118,6 @@ window.onload = function () {
     
         sliderWrapper.setAttribute('style', 'transform: translateX(-' + translateWidth + 'px)')
     }
-
-    var check = false;
-
-    window.addEventListener("scroll", () => {
-
-        if (check == false) {
-            var swiper = document.createElement("script");
-            swiper.src = "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js";
-            document.body.appendChild(swiper);
-    
-            var slider = document.createElement("script");
-            slider.src = "js/slider.js";
-            document.body.appendChild(slider);
-    
-            check = true;
-        }
-    })
-
 
     document.querySelectorAll('.navbarLinksList a[href^="#"]')
         .forEach(trigger => {
