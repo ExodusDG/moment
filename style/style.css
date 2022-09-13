@@ -19,10 +19,174 @@
     width: 100%;
 }
 
-body {
-    overflow-x: hidden;
+/*FONTS*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=tqf2ebt&ht=tk&f=15528.15530.17252.17253.6812.6813.6814.6817&a=15777542&app=typekit&e=css");
+
+
+@font-face {
+    font-family: 'europa';
+    src: url('/style/fonts/europanuovaextrabold.eot');
+    src: url('/style/fonts/europanuovaextrabold.eot?#iefix') format('embedded-opentype'),
+        url('/style/fonts/europanuovaextrabold.woff2') format('woff2'),
+        url('/style/fonts/europanuovaextrabold.woff') format('woff'),
+        url('/style/fonts/europanuovaextrabold.ttf') format('truetype'),
+        url('/style/fonts/europanuovaextrabold.svg#europanuovaextrabold') format('svg');
+    font-weight: 700;
 }
 
+@font-face {
+    font-family: "europa";
+    src: url("https://use.typekit.net/af/4eabcf/00000000000000003b9b12fd/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/4eabcf/00000000000000003b9b12fd/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/4eabcf/00000000000000003b9b12fd/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "europa";
+    src: url("https://use.typekit.net/af/e32ad9/00000000000000003b9b12fb/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/e32ad9/00000000000000003b9b12fb/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/e32ad9/00000000000000003b9b12fb/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+    font-display: auto;
+    font-style: italic;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+
+@font-face {
+    font-family: 'Caveat Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Caveat Regular'), url('/style/fonts/Caveat-Regular.woff') format('woff');
+}
+
+
+
+/* HAMBURGER */
+
+.hamburger {
+    font: inherit;
+    display: inline-block;
+    overflow: visible;
+    margin: 0;
+    padding: 15px;
+    cursor: pointer;
+    transition-timing-function: linear;
+    transition-duration: .15s;
+    transition-property: opacity, filter;
+    text-transform: none;
+    color: inherit;
+    border: 0;
+    background-color: transparent
+}
+
+.hamburger.is-active:hover,
+.hamburger:hover {
+    opacity: .7
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+    background-color: #000
+}
+
+.hamburger-box {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px
+}
+
+.hamburger-inner {
+    top: 50%;
+    display: block;
+    margin-top: -2px
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: #000
+}
+
+.hamburger-inner:after,
+.hamburger-inner:before {
+    display: block;
+    content: ""
+}
+
+.hamburger-inner:before {
+    top: -10px
+}
+
+.hamburger-inner:after {
+    bottom: -10px
+}
+
+.hamburger--slider .hamburger-inner {
+    top: 2px
+}
+
+.hamburger--slider .hamburger-inner:before {
+    top: 10px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform, opacity
+}
+
+.hamburger--slider .hamburger-inner:after {
+    top: 20px
+}
+
+.hamburger--slider.is-active .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(45deg)
+}
+
+.hamburger--slider.is-active .hamburger-inner:before {
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0
+}
+
+.hamburger--slider.is-active .hamburger-inner:after {
+    transform: translate3d(0, -20px, 0) rotate(-90deg)
+}
+
+.hamburger--slider-r .hamburger-inner {
+    top: 2px
+}
+
+.hamburger--slider-r .hamburger-inner:before {
+    top: 10px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform, opacity
+}
+
+.hamburger--slider-r .hamburger-inner:after {
+    top: 20px
+}
+
+.hamburger--slider-r.is-active .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(-45deg)
+}
+
+.hamburger--slider-r.is-active .hamburger-inner:before {
+    transform: rotate(45deg) translate3d(5.71429px, -6px, 0);
+    opacity: 0
+}
+
+.hamburger--slider-r.is-active .hamburger-inner:after {
+    transform: translate3d(0, -20px, 0) rotate(90deg)
+}
 
 /* NAVBAR */
 
@@ -61,7 +225,7 @@ li {
 .navbarLinksList a {
     color: white;
     font-family: "europa", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: #FFFFFF;
@@ -134,7 +298,7 @@ video {
 }
 
 .headerText h2 {
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat Regular';
     font-size: 26px;
     line-height: 33px;
     font-style: normal;
@@ -1824,4 +1988,9 @@ footer p {
         height: 100px;
         width: 60%;
     }
+}
+
+
+body {
+    overflow-x: hidden !important;
 }

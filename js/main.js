@@ -1,130 +1,141 @@
-var $page = $('html, body');
-$('a[href*="#"]').click(function() {
-    $page.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 600);
-    return false;
-}); //плавный скролл
-
-
-$('.hamburger').click(function() {
-    $('.mbMenu').toggleClass('mbMenuActive')
-
-    if ($('.mbMenu').hasClass('mbMenuActive')) {
-        $('body').attr('style', 'overflow: hidden')
-    } else {
-        $('body').attr('style', 'overflow: auto')
+window.onload = function () {
+    function $(selector) {
+        return document.querySelector(selector)
     }
 
-})
+    $(".hamburger").addEventListener("click", e => {
+        $('.mbMenu').classList.add('mbMenuActive');
+        $('body').setAttribute('style', 'overflow: hidden')
+    });
 
-$('.navbarLinksList a').click(function() {
-    $('.mbMenu').removeClass('mbMenuActive')
+    $(".is-active").addEventListener("click", e => {
+        $('.mbMenu').classList.remove('mbMenuActive');
+        $('body').setAttribute('style', 'overflow: auto')
+    });
 
-    $('body').attr('style', 'overflow: auto')
-})
+    var imagePath;
+    document.querySelectorAll('.howItemMain').forEach((item, i) => {
+        item.setAttribute('id', `how_${i + 1}`)
+    });
+
+    document
+        .querySelectorAll('.howItemMain')
+        .forEach(trigger => {
+            trigger.onclick = function (e) {
+                var currentSlide = this;
+                document.querySelectorAll('.howItemMain').forEach(e => {
+                    e.classList.remove('slideActive')
+                });
+
+                document.querySelectorAll('.howItemNote').forEach(e => {
+                    e.classList.remove('howItemNoteShow')
+                });
+
+                currentSlide.classList.add('slideActive')
+
+                currentSlide.querySelectorAll('.howItemNote').forEach(e => {
+                    e.classList.add('howItemNoteShow')
+                });
+
+                var slideNumber = this.getAttribute('id').replace('how_', '')
+                console.log(slideNumber)
+                sliderScroll(slideNumber)
+            };
+        });
+
+    const event = new Event('click', { bubbles: true });
+    $('#how_1').dispatchEvent(event);
+
+    document.querySelectorAll('.galleryLeft img').forEach(e => {
+        e.classList.add('galleryImageHidden')
+    });
+
+    function inViewport(element) {
+        if (!element) return false;
+        if (1 !== element.nodeType) return false;
+
+        var html = document.documentElement;
+        var rect = element.getBoundingClientRect();
+
+        return !!rect &&
+            rect.bottom >= 0 &&
+            rect.right >= 0 &&
+            rect.left <= html.clientWidth &&
+            rect.top <= html.clientHeight;
+    }
+
+    document.addEventListener("scroll", function(){
+        if (inViewport($('.galleryLeftWrapper_1'))) {
+            $('.galleryLeftWrapper_1 img').classList.remove('galleryImageHidden')
+        }
+
+        if (inViewport($('.galleryWrapper_1'))) {
+            $('.galleryWrapper_1 img').classList.remove('galleryImageHidden')
+        }
+
+        if (inViewport($('.galleryWrapper_2'))) {
+            $('.galleryWrapper_2 img').classList.remove('galleryImageHidden')
+            $('.galleryRight').classList.remove('galleryImageHidden')
+            $('.galleryRight span').textContent = 'Lorem'
+        }
+
+        if (inViewport($('.galleryWrapper_3'))) {
+            $('.galleryWrapper_3 img').classList.remove('galleryImageHidden')
+        }
+
+        if (inViewport($('.galleryWrapper_4'))) {
+            $('.galleryWrapper_4 img').classList.remove('galleryImageHidden')
+            $('.galleryRight span').textContent = 'Lorem 2'
+        }
+
+        if (inViewport($('.galleryWrapper_5'))) {
+            $('.galleryWrapper_5 img').classList.remove('galleryImageHidden')
+            $('.galleryRight span').textContent = 'Dolor '
+        }
+    })
+
+    function sliderScroll(number) {
+        var sliderWrapper = $('.sliderTrackWrapper')
+        var slideWidth = $('.sliderTrackWrapper img').getBoundingClientRect().width;
+        var translateWidth = number * slideWidth;
+    
+        sliderWrapper.setAttribute('style', 'transform: translateX(-' + translateWidth + 'px)')
+    }
+
+    var check = false;
+
+    window.addEventListener("scroll", () => {
+
+        if (check == false) {
+            var swiper = document.createElement("script");
+            swiper.src = "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js";
+            document.body.appendChild(swiper);
+    
+            var slider = document.createElement("script");
+            slider.src = "js/slider.js";
+            document.body.appendChild(slider);
+    
+            check = true;
+        }
+    })
 
 
+    document.querySelectorAll('.navbarLinksList a[href^="#"]')
+        .forEach(trigger => {
+            trigger.onclick = function (e) {
+                e.preventDefault();
+                let hash = this.getAttribute('href');
+                let target = document.querySelector(hash);
+                let headerOffset = 0;
+                let elementPosition = target.offsetTop;
+                let offsetPosition = elementPosition - headerOffset;
+                $('.mbMenu').classList.remove('mbMenuActive');
+                $('body').setAttribute('style', 'overflow: auto')
 
-/* HOW SLIDER */
-var imagePath;
-$.each($('.howItemMain'), function(key, value) {
-    key = key + 1;
-    $(this).attr('id', `how_${key}`)
-})
-
-$('.howItemMain').click(function() {
-    var currentSlide = $(this);
-    $('.howItemMain').removeClass('slideActive')
-    $('.howItemNote').removeClass('howItemNoteShow')
-
-    currentSlide.addClass('slideActive')
-    currentSlide.find('.howItemNote').addClass('howItemNoteShow')
-
-    //imagePath = $(this).find('.phoneImageSlider').attr('src')
-    //$('.howSliderWrapper img').attr('src', imagePath)
-
-    var slideNumber = $(this).attr('id').replace('how_', '')
-    console.log(slideNumber)
-    sliderScroll(slideNumber)
-})
-
-$('#how_1').trigger('click')
-
-
-$.each($('.galleryLeft img'), function(key, value) {
-    $(this).addClass('galleryImageHidden')
-})
-
-$.fn.isInViewport = function() {
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
-
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-
-    return elementBottom > viewportTop && elementTop < viewportBottom;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            };
+        });
 };
-
-$(window).on('resize scroll', function() {
-    if ($('.galleryLeftWrapper_1').isInViewport()) {
-
-        $('.galleryLeftWrapper_1 img').removeClass('galleryImageHidden')
-    } else {}
-
-    if ($('.galleryWrapper_1').isInViewport()) {
-        $('.galleryWrapper_1 img').removeClass('galleryImageHidden')
-    } else {}
-
-    if ($('.galleryWrapper_2').isInViewport()) {
-        $('.galleryRight span').text('Lorem')
-        $('.galleryWrapper_2 img').removeClass('galleryImageHidden')
-    } else {}
-
-    if ($('.galleryWrapper_3').isInViewport()) {
-        $('.galleryWrapper_3 img').removeClass('galleryImageHidden')
-    } else {}
-
-    if ($('.galleryWrapper_4').isInViewport()) {
-        $('.galleryRight span').text('Ipsum')
-        $('.galleryWrapper_4 img').removeClass('galleryImageHidden')
-    } else {}
-    if ($('.galleryWrapper_5').isInViewport()) {
-        $('.galleryRight span').text('Lorem 2')
-        $('.galleryWrapper_5 img').removeClass('galleryImageHidden')
-    } else {}
-
-    if ($('.galleryWrapper_4').isInViewport()) {
-        $('.galleryRight span').text('Dolor')
-        $('.galleryWrapper_4 img').removeClass('galleryImageHidden')
-    } else {}
-    if ($('.galleryRight').isInViewport()) {
-        $('.galleryRight').removeClass('galleryImageHidden')
-    } else {}
-});
-
-
-function sliderScroll(number) {
-    var sliderWrapper = $('.sliderTrackWrapper')
-    var slideWidth = $('.sliderTrackWrapper img').width()
-    var translateWidth = number * slideWidth;
-
-    sliderWrapper.attr('style', 'transform: translateX(-' + translateWidth + 'px)')
-}
-
-var check = false;
-
-window.addEventListener("scroll", () => {
-
-    if (check == false) {
-        var swiper = document.createElement("script");
-        swiper.src = "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js";
-        document.body.appendChild(swiper);
-
-        var slider = document.createElement("script");
-        slider.src = "js/slider.js";
-        document.body.appendChild(slider);
-
-        check = true;
-    }
-})
