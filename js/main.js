@@ -1,90 +1,141 @@
-var $page = $('html, body');
-    $('a[href*="#"]').click(function() {
-        $page.animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 600);
-        return false;
-    }); //плавный скролл
-
-
-$('.hamburger').click(function(){
-  $('.mbMenu').toggleClass('mbMenuActive')
-})
-
-const swiperTop = new Swiper('.swiperTop', {
-  slidesPerView: 1,
-  spaceBetween: 30,
-
-  loop: true,
-  navigation: {
-    nextEl: '.sliderTopRight',
-    prevEl: '.sliderTopLeft',
-  },
-  
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 0,
-    },
-    1024: {
-      slidesPerView: 1,
-      spaceBetween: 30,
+window.onload = function () {
+    function $(selector) {
+        return document.querySelector(selector)
     }
-  }
-});
 
-const swiperMiddle = new Swiper('.sliderVertWrapper', {
-  direction: "vertical",
-});
+    $(".hamburger").addEventListener("click", e => {
+        $('.mbMenu').classList.add('mbMenuActive');
+        $('body').setAttribute('style', 'overflow: hidden')
+    });
 
-const swiperBottom = new Swiper('.swiperBottom', {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  autoplay: true,
-  loop: true,
-  navigation: {
-    nextEl: '.sliderBottomRight',
-    prevEl: '.sliderBottomLeft',
-  },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-});
+    $(".is-active").addEventListener("click", e => {
+        $('.mbMenu').classList.remove('mbMenuActive');
+        $('body').setAttribute('style', 'overflow: auto')
+    });
 
-const swiperFeatures = new Swiper('.swiperFeatures', {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  autoplay: true,
-  loop: true,
-  navigation: {
-    nextEl: '.sliderFeaturesRight',
-    prevEl: '.sliderFeaturesLeft',
-  },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-});
+    var imagePath;
+    document.querySelectorAll('.howItemMain').forEach((item, i) => {
+        item.setAttribute('id', `how_${i + 1}`)
+    });
+
+    document
+        .querySelectorAll('.howItemMain')
+        .forEach(trigger => {
+            trigger.onclick = function (e) {
+                var currentSlide = this;
+                document.querySelectorAll('.howItemMain').forEach(e => {
+                    e.classList.remove('slideActive')
+                });
+
+                document.querySelectorAll('.howItemNote').forEach(e => {
+                    e.classList.remove('howItemNoteShow')
+                });
+
+                currentSlide.classList.add('slideActive')
+
+                currentSlide.querySelectorAll('.howItemNote').forEach(e => {
+                    e.classList.add('howItemNoteShow')
+                });
+
+                var slideNumber = this.getAttribute('id').replace('how_', '')
+                console.log(slideNumber)
+                sliderScroll(slideNumber)
+            };
+        });
+
+    const event = new Event('click', { bubbles: true });
+    $('#how_1').dispatchEvent(event);
+
+    document.querySelectorAll('.galleryLeft img').forEach(e => {
+        e.classList.add('galleryImageHidden')
+    });
+
+    function inViewport(element) {
+        if (!element) return false;
+        if (1 !== element.nodeType) return false;
+
+        var html = document.documentElement;
+        var rect = element.getBoundingClientRect();
+
+        return !!rect &&
+            rect.bottom >= 0 &&
+            rect.right >= 0 &&
+            rect.left <= html.clientWidth &&
+            rect.top <= html.clientHeight;
+    }
+
+    document.addEventListener("scroll", function(){
+        if (inViewport($('.galleryLeftWrapper_1'))) {
+            $('.galleryLeftWrapper_1 img').classList.remove('galleryImageHidden')
+        }
+
+        if (inViewport($('.galleryWrapper_1'))) {
+            $('.galleryWrapper_1 img').classList.remove('galleryImageHidden')
+        }
+
+        if (inViewport($('.galleryWrapper_2'))) {
+            $('.galleryWrapper_2 img').classList.remove('galleryImageHidden')
+            $('.galleryRight').classList.remove('galleryImageHidden')
+            $('.galleryRight span').textContent = 'Lorem'
+        }
+
+        if (inViewport($('.galleryWrapper_3'))) {
+            $('.galleryWrapper_3 img').classList.remove('galleryImageHidden')
+        }
+
+        if (inViewport($('.galleryWrapper_4'))) {
+            $('.galleryWrapper_4 img').classList.remove('galleryImageHidden')
+            $('.galleryRight span').textContent = 'Lorem 2'
+        }
+
+        if (inViewport($('.galleryWrapper_5'))) {
+            $('.galleryWrapper_5 img').classList.remove('galleryImageHidden')
+            $('.galleryRight span').textContent = 'Dolor '
+        }
+    })
+
+    function sliderScroll(number) {
+        var sliderWrapper = $('.sliderTrackWrapper')
+        var slideWidth = $('.sliderTrackWrapper img').getBoundingClientRect().width;
+        var translateWidth = number * slideWidth;
+    
+        sliderWrapper.setAttribute('style', 'transform: translateX(-' + translateWidth + 'px)')
+    }
+
+    var check = false;
+
+    window.addEventListener("scroll", () => {
+
+        if (check == false) {
+            var swiper = document.createElement("script");
+            swiper.src = "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js";
+            document.body.appendChild(swiper);
+    
+            var slider = document.createElement("script");
+            slider.src = "js/slider.js";
+            document.body.appendChild(slider);
+    
+            check = true;
+        }
+    })
 
 
-/* HOW SLIDER */
-var imagePath;
-$.each($('.howItemMain'), function (key, value) {
-  key = key + 1;
-  $(this).attr('id', `how_${key}`)
-})
+    document.querySelectorAll('.navbarLinksList a[href^="#"]')
+        .forEach(trigger => {
+            trigger.onclick = function (e) {
+                e.preventDefault();
+                let hash = this.getAttribute('href');
+                let target = document.querySelector(hash);
+                let headerOffset = 0;
+                let elementPosition = target.offsetTop;
+                let offsetPosition = elementPosition - headerOffset;
+                $('.mbMenu').classList.remove('mbMenuActive');
+                $('body').setAttribute('style', 'overflow: auto')
 
-$('.howItemMain').click(function () {
-  var currentSlide = $(this);
-  $('.howItemMain').removeClass('slideActive')
-  $('.howItemNote').removeClass('howItemNoteShow')
-
-  currentSlide.addClass('slideActive')
-  currentSlide.find('.howItemNote').addClass('howItemNoteShow')
-
-  imagePath = $(this).find('.phoneImageSlider').attr('src')
-  $('.howSliderWrapper img').attr('src', imagePath)
-})
-
-$('#how_1').trigger('click')
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            };
+        });
+};

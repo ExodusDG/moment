@@ -6,16 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moment - Landing Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style/hamburgers.min.css">
-    <link rel="stylesheet" href="style/fonts.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" async href="style/style.min.css">
+    <link rel="stylesheet" defer href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -23,7 +15,7 @@
         <div class="navbar">
             <div class="container">
                 <nav>
-                    <a href="/"><img src="images/logotype.svg" alt="Logotype"></a>
+                    <a href="/"><img loading="lazy" src="images/logotype.svg" alt="Logotype"></a>
                     <ul class="navbarLinksList">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#works">How it Works</a></li>
@@ -49,7 +41,7 @@
             <div class="mbMenu">
                 <div class="container">
                     <div class="mbMenuHeader">
-                        <a href="/"><img src="images/logotype.svg" alt="Logotype"></a>
+                        <a href="/"><img loading="lazy" src="images/logotype.svg" alt="Logotype"></a>
                         <button class="hamburger is-active hamburger--slider" type="button">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
@@ -90,14 +82,15 @@
                         <a href="#"><button class="transparentButton">Download App</button></a>
                     </div>
 
-                    <img class="headerMouse" src="images/mouse.png" alt="Mouse">
+                    <img loading="lazy" class="headerMouse" src="images/mouse.png" alt="Mouse">
                 </div>
 
             </div>
 
             <!-- YOUTUBE VIDEO -->
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/zmN8EhB37xA?&autoplay=1&mute=1&controls=0&loop=1"></iframe>
+                <video autoplay="" muted="" loop="" playsinline="" class="css-z9g80j"><source src="images/video.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.</video>
+
             </div>
             <!-- YOUTUBE VIDEO END -->
         </div>
@@ -110,84 +103,84 @@
             <div class="howTitle">
                 <hr>
                 <h1>How it works?</h1>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint
-                    commodi
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi
                 </h2>
             </div>
 
             <div class="howContent">
                 <div class="howSlider">
-                    <div class="howSliderWrapper">
-                        <img src="images/appScreen.png" alt="App">
+                    <div class="howSliderCrop">
+                        <div class="howSliderWrapper">
+                            <div class="sliderTrackWrapper">
+                                <img loading="lazy" src="images/appScreen.png" alt="App">
+                                <img loading="lazy" src="images/appScreen.png" alt="App">
+                                <img loading="lazy" src="images/appScreen.png" alt="App">
+                                <img loading="lazy" src="images/appScreen.png" alt="App">
+                                <img loading="lazy" src="images/appScreen.png" alt="App">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="howItems">
                     <div class="howItemMain">
                         <div class="howItem">
-                            <i class="fa-solid fa-eye"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path class="howIcon" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
                         </div>
                         <div class="howItemNote">
-                            <img class="phoneImageSlider" src="images/appScreen.png" alt="App">
-                            <img src="images/note_1.svg" alt="note">
+                            <img loading="lazy" class="phoneImageSlider" src="images/appScreen.png" alt="App">
+                            <img loading="lazy" src="images/note_1.svg" alt="note">
                             <div class="howItemBlock">
                                 <p class="howItemTitle">Lorem Ipsum 1</p>
-                                <p class="howItemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Repellat quisquam dolor, ratione tempore, blanditiis iure non. Reprehenderit libero
-                                    debitis quasi, odit, aliquid provident.</p>
+                                <p class="howItemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quisquam dolor, ratione tempore, blanditiis iure non. Reprehenderit libero debitis quasi, odit, aliquid provident.</p>
                             </div>
                         </div>
                     </div>
 
-                    <img class="howItemLine" src="images/Line.svg" alt="Line">
+                    <img loading="lazy" class="howItemLine" src="images/Line.svg" alt="Line">
 
                     <div class="howItemMain">
                         <div class="howItem">
-                            <i class="fa-solid fa-bell"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/></svg>
                         </div>
                         <div class="howItemNote">
-                            <img class="phoneImageSlider" src="images/phone_1.png" alt="App">
-                            <img src="images/note_1.svg" alt="note">
+                            <img loading="lazy" class="phoneImageSlider" src="images/phone_1.png" alt="App">
+                            <img loading="lazy" src="images/note_1.svg" alt="note">
                             <div class="howItemBlock">
                                 <p class="howItemTitle">Lorem Ipsum 2</p>
-                                <p class="howItemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Repellat quisquam dolor, ratione tempore, blanditiis iure non. Reprehenderit libero
-                                    debitis quasi, odit, aliquid provident.</p>
+                                <p class="howItemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quisquam dolor, ratione tempore, blanditiis iure non. Reprehenderit libero debitis quasi, odit, aliquid provident.</p>
                             </div>
                         </div>
                     </div>
 
-                    <img class="howItemLine" src="images/Line.svg" alt="Line">
+                    <img loading="lazy" class="howItemLine" src="images/Line.svg" alt="Line">
 
                     <div class="howItemMain">
                         <div class="howItem">
-                            <i class="fa-solid fa-gauge-high"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM288 96c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zM256 416c35.3 0 64-28.7 64-64c0-17.4-6.9-33.1-18.1-44.6L366 161.7c5.3-12.1-.2-26.3-12.3-31.6s-26.3 .2-31.6 12.3L257.9 288c-.6 0-1.3 0-1.9 0c-35.3 0-64 28.7-64 64s28.7 64 64 64zM176 144c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zM96 288c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32zm352-32c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z"/></svg>
                         </div>
                         <div class="howItemNote">
-                            <img class="phoneImageSlider" src="images/appScreen.png" alt="App">
-                            <img src="images/note_1.svg" alt="note">
+                            <img loading="lazy" class="phoneImageSlider" src="images/appScreen.png" alt="App">
+                            <img loading="lazy" src="images/note_1.svg" alt="note">
                             <div class="howItemBlock">
                                 <p class="howItemTitle">Lorem Ipsum 3</p>
-                                <p class="howItemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Repellat quisquam dolor, ratione tempore, blanditiis iure non. Reprehenderit libero
-                                    debitis quasi, odit, aliquid provident.</p>
+                                <p class="howItemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quisquam dolor, ratione tempore, blanditiis iure non. Reprehenderit libero debitis quasi, odit, aliquid provident.</p>
                             </div>
                         </div>
                     </div>
 
-                    <img class="howItemLine" src="images/Line.svg" alt="Line">
+                    <img loading="lazy" class="howItemLine" src="images/Line.svg" alt="Line">
 
                     <div class="howItemMain">
                         <div class="howItem">
-                            <i class="fa-solid fa-rocket"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40s17.9 40 40 40z"/></svg>
                         </div>
                         <div class="howItemNote">
-                            <img class="phoneImageSlider" src="images/phone_1.png" alt="App">
-                            <img src="images/note_1.svg" alt="note">
+                            <img loading="lazy" class="phoneImageSlider" src="images/phone_1.png" alt="App">
+                            <img loading="lazy" src="images/note_1.svg" alt="note">
                             <div class="howItemBlock">
                                 <p class="howItemTitle">Lorem Ipsum 4</p>
-                                <p class="howItemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Repellat quisquam dolor, ratione tempore, blanditiis iure non. Reprehenderit libero
-                                    debitis quasi, odit, aliquid provident.</p>
+                                <p class="howItemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quisquam dolor, ratione tempore, blanditiis iure non. Reprehenderit libero debitis quasi, odit, aliquid provident.</p>
                             </div>
                         </div>
                     </div>
@@ -203,22 +196,21 @@
             <div class="downloadContent">
                 <div class="downloadLeft">
                     <h1>DOWNLOAD <span>APP</span> RIGHT NOW</h1>
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel
-                        sint commodi repudiandae consequuntur voluptatum laborum numquam.
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam.
                     </h2>
                     <div class="downloadLeftButtons">
                         <a class="transparentButton" href="#">
-                            <i class="fa-brands fa-apple"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
                             <p>Download Now</p>
                         </a>
                         <a class="blueButton" href="#">
-                            <i class="fa-brands fa-google-play"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
                             <p>Download Now</p>
                         </a>
                     </div>
                 </div>
                 <div class="downloadRight">
-                    <img src="images/downloadPhone.png" alt="Download">
+                    <img loading="lazy" src="images/downloadPhone.png" alt="Download">
                 </div>
             </div>
         </div>
@@ -227,6 +219,57 @@
     <!-- GALLERY -->
 
     <section class="gallery" id="gallery">
+
+        <div class="galleryLeft">
+            <div class="galleryLeftWrapper_1">
+                <picture>
+                    <source srcset="images/gallery_1.webp" type="image/webp">
+                    <img loading="lazy" src="images/gallery_1.png" alt="Image">
+                </picture>
+            </div>
+
+            <div class="gallerySection">
+                <div class="galleryWrapper">
+                    <div class="galleryWrapper_1">
+                        <picture>
+                            <source srcset="images/bottomSlider/image_1.webp" type="image/webp">
+                            <img loading="lazy" src="images/bottomSlider/image_1.png" alt="Image">
+                        </picture>
+                    </div>
+                    <div class="galleryWrapper_2">
+                        <picture>
+                            <source srcset="images/bottomSlider/image_2.webp" type="image/webp">
+                            <img loading="lazy" src="images/bottomSlider/image_2.png" alt="Image">
+                        </picture>
+                    </div>
+                    <div class="galleryWrapper_3">
+                        <picture>
+                            <source srcset="images/featuresSlider/image_2.webp" type="image/webp">
+                            <img loading="lazy" src="images/featuresSlider/image_2.jpg" alt="Image">
+                        </picture>
+                    </div>
+                    <div class="galleryWrapper_4">
+                        <picture>
+                            <source srcset="images/middleSlider/image_1.webp" type="image/webp">
+                            <img loading="lazy" src="images/middleSlider/image_1.png" alt="Image">
+                        </picture>
+                    </div>
+                    <div class="galleryWrapper_5">
+                        <picture>
+                            <source srcset="images/bottomSlider/image_2.webp" type="image/webp">
+                            <img loading="lazy" src="images/bottomSlider/image_2.png" alt="Image">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="galleryRight galleryImageHidden">
+                    <p>We bring brands to life through <br><span>Identity</span></p>
+                </div>
+            </div>
+
+        </div>
+
+        <!--
         <h1 class="galleryTitle">Gallery</h1>
 
         <div class="sliderTop">
@@ -236,8 +279,8 @@
             <div class="sliderTopWrapper">
                 <div class="swiper swiperTop">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/topSlider/image_1.png" alt="Slider Image"></div>
-                        <div class="swiper-slide"><img src="images/topSlider/image_2.png" alt="Slider Image"></div>
+                        <div class="swiper-slide"><img  loading="lazy"src="images/topSlider/image_1.png" alt="Slider Image"></div>
+                        <div class="swiper-slide"><img  loading="lazy"src="images/topSlider/image_2.png" alt="Slider Image"></div>
                     </div>
                 </div>
                 <div class="sliderTopBottom">
@@ -253,10 +296,10 @@
             <div class="swiper sliderVertWrapper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="images/middleSlider/image_1.png" alt="Slider Image">
+                        <img  loading="lazy"src="images/middleSlider/image_1.png" alt="Slider Image">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/middleSlider/image_1.png" alt="Slider Image">
+                        <img  loading="lazy"src="images/middleSlider/image_1.png" alt="Slider Image">
                     </div>
                 </div>
             </div>
@@ -276,11 +319,12 @@
                     <button class="sliderBottomRight"><i class="fa-sharp fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/bottomSlider/image_1.png" alt="Slider Image"></div>
-                    <div class="swiper-slide"><img src="images/bottomSlider/image_2.png" alt="Slider Image"></div>
+                    <div class="swiper-slide"><img  loading="lazy"src="images/bottomSlider/image_1.png" alt="Slider Image"></div>
+                    <div class="swiper-slide"><img  loading="lazy"src="images/bottomSlider/image_2.png" alt="Slider Image"></div>
                 </div>
             </div>
         </div>
+        -->
 
     </section>
 
@@ -291,35 +335,35 @@
             <h1>Features.</h1>
             <div class="swiper swiperFeatures">
                 <div class="swiperBottomNav swiperFeaturesNav">
-                    <button class="sliderFeaturesLeft"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
-                    <button class="sliderFeaturesRight"><i class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                    <button class="sliderFeaturesLeft"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></i></button>
+                    <button class="sliderFeaturesRight"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></i></button>
                 </div>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="swiperFeaturesContent">
                             <p class="swiperFeaturesNumber">1/4</p>
                             <p class="swiperFeaturesTitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p class="swiperFeaturesDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Maxime mollitia,
-                                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                            <p class="swiperFeaturesDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
                                 optio, eaque rerum! Provident similique accusantium nemo autem.</p>
                             <a href="#"><button class="blueButton">Registration</button></a>
                         </div>
-                        <img src="images/featuresSlider/image_1.png" alt="Slider Image">
+                        <picture>
+                            <source srcset="images/featuresSlider/image_1.webp" type="image/webp">
+                            <img loading="lazy" src="images/featuresSlider/image_1.png" alt="Image">
+                        </picture>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiperFeaturesContent">
                             <p class="swiperFeaturesNumber">2/4</p>
                             <p class="swiperFeaturesTitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p class="swiperFeaturesDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Maxime mollitia,
-                                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                            <p class="swiperFeaturesDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
                                 optio, eaque rerum! Provident similique accusantium nemo autem.</p>
                             <a href="#"><button class="blueButton">Registration</button></a>
                         </div>
-                        <img src="images/featuresSlider/image_2.jpg" alt="Slider Image">
+                        <picture>
+                            <source srcset="images/featuresSlider/image_2.webp" type="image/webp">
+                            <img loading="lazy" src="images/featuresSlider/image_2.jpg" alt="Image">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -333,8 +377,7 @@
             <div class="downloadContent">
                 <div class="downloadLeft">
                     <h1>Lorem <span>ipsum</span> dolor sit</h1>
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel
-                        sint commodi repudiandae consequuntur voluptatum laborum numquam.
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam.
                     </h2>
                 </div>
                 <div class="statsRight">
@@ -366,8 +409,7 @@
             <div class="contactsText">
                 <h1>Contacts</h1>
                 <hr>
-                <p class="contactsTextDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                    molestiae quas vel sint commodi repudiandae.</p>
+                <p class="contactsTextDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae.</p>
                 <p class="phoneNumber"><span>097</span>5446793</p>
             </div>
         </div>
@@ -377,15 +419,13 @@
 
     <footer>
         <div class="container">
-            <img class="footerLogo" src="images/logotype.svg" alt="Logotype">
+            <img loading="lazy" class="footerLogo" src="images/logotype.svg" alt="Logotype">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
 
     </footer>
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script async src="js/main.js"></script>
 </body>
 
 </html>
