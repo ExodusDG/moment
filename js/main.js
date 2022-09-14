@@ -1,5 +1,7 @@
 window.onload = function () {
 
+var bodyWidth = window.innerWidth;
+
     function $(selector) {
         return document.querySelector(selector)
     }
@@ -69,28 +71,37 @@ window.onload = function () {
             $('.galleryLeftWrapper_1 img').classList.remove('galleryImageHidden')
         }
 
-        if (inViewport($('.galleryWrapper_1'))) {
+        if (inViewport($('.galleryWrapper_1'))) { //Image 1
             $('.galleryWrapper_1 img').classList.remove('galleryImageHidden')
         }
 
-        if (inViewport($('.galleryWrapper_2'))) {
+        if (inViewport($('.galleryWrapper_2'))) { //Image 2
             $('.galleryWrapper_2 img').classList.remove('galleryImageHidden')
             $('.galleryRight').classList.remove('galleryImageHidden')
-            $('.galleryRight span').textContent = 'Lorem'
+
+            if (bodyWidth > 768) {
+                $('.galleryRight span').textContent = 'Lorem'
+            }
         }
 
-        if (inViewport($('.galleryWrapper_3'))) {
+        if (inViewport($('.galleryWrapper_3'))) { //Image 3
             $('.galleryWrapper_3 img').classList.remove('galleryImageHidden')
         }
 
-        if (inViewport($('.galleryWrapper_4'))) {
+        if (inViewport($('.galleryWrapper_4'))) { //Image 4
             $('.galleryWrapper_4 img').classList.remove('galleryImageHidden')
-            $('.galleryRight span').textContent = 'Lorem 2'
+
+            if (bodyWidth > 768) {
+                $('.galleryRight span').textContent = 'Lorem 2'
+            }
         }
 
-        if (inViewport($('.galleryWrapper_5'))) {
+        if (inViewport($('.galleryWrapper_5'))) { //Image 5
             $('.galleryWrapper_5 img').classList.remove('galleryImageHidden')
-            $('.galleryRight span').textContent = 'Dolor '
+
+            if (bodyWidth > 768) {
+                $('.galleryRight span').textContent = 'Dolor '
+            }
         }
     })
 
